@@ -4,6 +4,9 @@ title: An Analysis of a Lua Obfuscation and its Deobfuscation
 date: 2024-04-19 14:33 +0900
 categories: [Programming, Reverse Engineering]
 tags: [Lua, Obfuscation, Deobfuscation]
+image:
+  path: /assets/img/posts/lua-obs/before-decryption.png
+  alt: The Lua script before decryption
 ---
 
 ## Headings
@@ -312,7 +315,7 @@ What I did was to replace the encrypted keys such as `["_ililIIIlIiillIlIlllIlIl
 
 Now, we can match up encrypted scripts by using the number of arguments and unique keys.
 
-```lua
+```python
 import os
 import re
 
