@@ -19,13 +19,12 @@ After diving into the Two Sum problem, today let's explore another classic probl
 _Remove Element Problem Description_
 
 ```
-Given an integer array nums and an integer val, remove all occurrences of val in nums in-place. The relative order of the elements may be changed.
+Given an integer array nums and an integer val, remove all occurrences of val in nums in-place. The order of the elements may be changed. Then return the number of elements in nums which are not equal to val.
 
-Since it is impossible to change the length of the array in some languages, you must instead have the result be placed in the first part of the array nums. More formally, if there are k elements after removing the duplicates, then the first k elements of nums should hold the final result. It does not matter what you leave beyond the first k elements.
+Consider the number of elements in nums which are not equal to val be k, to get accepted, you need to do the following things:
 
-Return k after placing the final result in the first k slots of nums.
-
-Do not allocate extra space for another array. You must do this by modifying the input array in-place with O(1) extra memory.
+* Change the array nums such that the first k elements of nums contain the elements which are not equal to val. The remaining elements of nums are not important as well as the size of nums.
+* Return k.
 ```
 
 The Remove Element problem is a fundamental problem that helps understand the concepts of in-place array manipulation and efficient space usage.
@@ -39,15 +38,16 @@ We need to remove all occurrences of a specific value from the array and return 
 ### 1. Simple List Comprehension
 
 ```python
-def removeElement(self, nums: List[int], val: int) -> int:
-    newArr = []
+class Solution:
+    def removeElement(self, nums: List[int], val: int) -> int:
+        newArr = []
 
-    for x in nums:
-        if x != val:
-            newArr.append(x)
-    
-    nums[:] = newArr
-    return len(nums)
+        for x in nums:
+            if x != val:
+                newArr.append(x)
+        
+        nums[:] = newArr
+        return len(nums)
 ```
 
 In this approach, we create a new array `newArr` and append all elements from `nums` that are not equal to `val`. After that, we copy `newArr` back to `nums` and return its length. 
@@ -64,19 +64,14 @@ However, this solution uses extra space proportional to the number of elements i
 class Solution:
     def removeElement(self, nums: List[int], val: int) -> int:
         pOne = 0
-        pTwo = len(nums) - 1 
+        pTwo = len(nums) - 1
 
         while pOne <= pTwo:
-            # Adjust the goal point
-            if nums[pTwo] == val:
-                pTwo -= 1
-                continue
-            
             if nums[pOne] == val:
                 nums[pOne], nums[pTwo] = nums[pTwo], nums[pOne]
                 pTwo -= 1
-            
-            pOne += 1
+            else:
+                pOne += 1
 
         return pTwo + 1
 ```
