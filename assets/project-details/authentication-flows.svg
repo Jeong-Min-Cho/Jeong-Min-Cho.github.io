@@ -1,0 +1,173 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 700">
+  <defs>
+    <linearGradient id="bgGrad4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a"/>
+      <stop offset="100%" style="stop-color:#1e293b"/>
+    </linearGradient>
+    <linearGradient id="browserGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6"/>
+      <stop offset="100%" style="stop-color:#1d4ed8"/>
+    </linearGradient>
+    <linearGradient id="serverGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10b981"/>
+      <stop offset="100%" style="stop-color:#059669"/>
+    </linearGradient>
+    <linearGradient id="desktopGrad4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8b5cf6"/>
+      <stop offset="100%" style="stop-color:#6d28d9"/>
+    </linearGradient>
+    <linearGradient id="moduleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f59e0b"/>
+      <stop offset="100%" style="stop-color:#d97706"/>
+    </linearGradient>
+    <filter id="shadow4" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#10b981"/>
+    </marker>
+    <marker id="arrowBlue4" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#3b82f6"/>
+    </marker>
+    <marker id="arrowPurple4" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#8b5cf6"/>
+    </marker>
+    <marker id="arrowOrange" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#f59e0b"/>
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="900" height="700" fill="url(#bgGrad4)"/>
+  
+  <!-- Grid -->
+  <pattern id="grid4" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#334155" stroke-width="0.5" opacity="0.2"/>
+  </pattern>
+  <rect width="900" height="700" fill="url(#grid4)"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" fill="#f8fafc" font-family="Segoe UI, sans-serif" font-size="26" font-weight="bold">AUTHENTICATION FLOWS</text>
+  
+  <!-- ========== WEB DASHBOARD FLOW ========== -->
+  <rect x="30" y="70" width="400" height="280" rx="12" fill="#1e293b" stroke="#3b82f6" stroke-width="2"/>
+  <text x="230" y="100" text-anchor="middle" fill="#3b82f6" font-family="Segoe UI, sans-serif" font-size="16" font-weight="bold">Web Dashboard Flow</text>
+  
+  <!-- Browser Box -->
+  <g filter="url(#shadow4)">
+    <rect x="60" y="130" width="120" height="80" rx="8" fill="url(#browserGrad)"/>
+    <text x="120" y="165" text-anchor="middle" fill="#fff" font-family="Segoe UI, sans-serif" font-size="14" font-weight="bold">Browser</text>
+    <text x="120" y="185" text-anchor="middle" fill="#bfdbfe" font-family="Segoe UI, sans-serif" font-size="11">Next.js</text>
+  </g>
+  
+  <!-- Backend Box (Web) -->
+  <g filter="url(#shadow4)">
+    <rect x="280" y="130" width="120" height="80" rx="8" fill="url(#serverGrad)"/>
+    <text x="340" y="165" text-anchor="middle" fill="#fff" font-family="Segoe UI, sans-serif" font-size="14" font-weight="bold">Backend</text>
+    <text x="340" y="185" text-anchor="middle" fill="#d1fae5" font-family="Segoe UI, sans-serif" font-size="11">FastAPI</text>
+  </g>
+  
+  <!-- Arrow 1: POST /auth/login -->
+  <path d="M 180 150 L 270 150" stroke="#3b82f6" stroke-width="2" fill="none" marker-end="url(#arrowBlue4)"/>
+  <text x="225" y="143" text-anchor="middle" fill="#60a5fa" font-family="Consolas, monospace" font-size="9">POST /auth/login</text>
+  
+  <!-- Arrow 2: Set-Cookie -->
+  <path d="M 270 175 L 180 175" stroke="#10b981" stroke-width="2" fill="none" marker-end="url(#arrowGreen)"/>
+  <text x="225" y="193" text-anchor="middle" fill="#34d399" font-family="Consolas, monospace" font-size="9">Set-Cookie: session</text>
+  
+  <!-- Arrow 3: GET /auth/me -->
+  <path d="M 120 210 L 120 260 L 340 260 L 340 210" stroke="#3b82f6" stroke-width="2" fill="none" stroke-dasharray="4,2" marker-end="url(#arrowBlue4)"/>
+  <text x="230" y="250" text-anchor="middle" fill="#60a5fa" font-family="Consolas, monospace" font-size="9">GET /auth/me</text>
+  
+  <!-- Arrow 4: User Data -->
+  <path d="M 340 280 L 340 310 L 120 310 L 120 280" stroke="#10b981" stroke-width="2" fill="none" stroke-dasharray="4,2" marker-end="url(#arrowGreen)"/>
+  <text x="230" y="323" text-anchor="middle" fill="#34d399" font-family="Consolas, monospace" font-size="9">User Data (JWT)</text>
+  
+  <!-- ========== DESKTOP CLIENT FLOW ========== -->
+  <rect x="470" y="70" width="400" height="280" rx="12" fill="#1e293b" stroke="#8b5cf6" stroke-width="2"/>
+  <text x="670" y="100" text-anchor="middle" fill="#8b5cf6" font-family="Segoe UI, sans-serif" font-size="16" font-weight="bold">Desktop Client Flow</text>
+  
+  <!-- Desktop Client Box -->
+  <g filter="url(#shadow4)">
+    <rect x="500" y="130" width="120" height="80" rx="8" fill="url(#desktopGrad4)"/>
+    <text x="560" y="165" text-anchor="middle" fill="#fff" font-family="Segoe UI, sans-serif" font-size="14" font-weight="bold">Desktop</text>
+    <text x="560" y="185" text-anchor="middle" fill="#ddd6fe" font-family="Segoe UI, sans-serif" font-size="11">C++ Client</text>
+  </g>
+  
+  <!-- Backend Box (Desktop) -->
+  <g filter="url(#shadow4)">
+    <rect x="720" y="130" width="120" height="80" rx="8" fill="url(#serverGrad)"/>
+    <text x="780" y="165" text-anchor="middle" fill="#fff" font-family="Segoe UI, sans-serif" font-size="14" font-weight="bold">Backend</text>
+    <text x="780" y="185" text-anchor="middle" fill="#d1fae5" font-family="Segoe UI, sans-serif" font-size="11">FastAPI</text>
+  </g>
+  
+  <!-- Arrow 1: POST /auth/client/login -->
+  <path d="M 620 145 L 710 145" stroke="#8b5cf6" stroke-width="2" fill="none" marker-end="url(#arrowPurple4)"/>
+  <text x="665" y="138" text-anchor="middle" fill="#a78bfa" font-family="Consolas, monospace" font-size="8">POST /auth/client/login</text>
+  
+  <!-- Arrow 2: {credentials + hwid} -->
+  <rect x="625" y="152" width="80" height="20" rx="4" fill="#312e81"/>
+  <text x="665" y="166" text-anchor="middle" fill="#c4b5fd" font-family="Consolas, monospace" font-size="8">{user, pwd, hwid}</text>
+  
+  <!-- Arrow 3: Response -->
+  <path d="M 710 190 L 620 190" stroke="#10b981" stroke-width="2" fill="none" marker-end="url(#arrowGreen)"/>
+  <text x="665" y="205" text-anchor="middle" fill="#34d399" font-family="Consolas, monospace" font-size="8">{access_token, refresh}</text>
+  
+  <!-- Encrypted download flow -->
+  <path d="M 560 210 L 560 260 L 780 260 L 780 210" stroke="#8b5cf6" stroke-width="2" fill="none" stroke-dasharray="4,2" marker-end="url(#arrowPurple4)"/>
+  <text x="670" y="250" text-anchor="middle" fill="#a78bfa" font-family="Consolas, monospace" font-size="8">GET /files/download (encrypted)</text>
+  
+  <!-- Decrypt indicator -->
+  <rect x="505" y="285" width="110" height="30" rx="6" fill="#581c87"/>
+  <text x="560" y="305" text-anchor="middle" fill="#e9d5ff" font-family="Segoe UI, sans-serif" font-size="9">🔐 HKDF Decrypt</text>
+  
+  <!-- ========== HEARTBEAT FLOW ========== -->
+  <rect x="150" y="380" width="600" height="280" rx="12" fill="#1e293b" stroke="#f59e0b" stroke-width="2"/>
+  <text x="450" y="410" text-anchor="middle" fill="#f59e0b" font-family="Segoe UI, sans-serif" font-size="16" font-weight="bold">Heartbeat &amp; License Validation Flow</text>
+  
+  <!-- Client Module Box -->
+  <g filter="url(#shadow4)">
+    <rect x="180" y="440" width="140" height="90" rx="8" fill="url(#moduleGrad)"/>
+    <text x="250" y="475" text-anchor="middle" fill="#fff" font-family="Segoe UI, sans-serif" font-size="14" font-weight="bold">Client Module</text>
+    <text x="250" y="495" text-anchor="middle" fill="#fef3c7" font-family="Segoe UI, sans-serif" font-size="10">Running Application</text>
+    <text x="250" y="515" text-anchor="middle" fill="#fde68a" font-family="Segoe UI, sans-serif" font-size="10">License Validation</text>
+  </g>
+  
+  <!-- Desktop Client (in heartbeat) -->
+  <g filter="url(#shadow4)">
+    <rect x="380" y="440" width="140" height="90" rx="8" fill="url(#desktopGrad4)"/>
+    <text x="450" y="475" text-anchor="middle" fill="#fff" font-family="Segoe UI, sans-serif" font-size="14" font-weight="bold">Desktop Client</text>
+    <text x="450" y="495" text-anchor="middle" fill="#ddd6fe" font-family="Segoe UI, sans-serif" font-size="10">JWT Tokens</text>
+    <text x="450" y="515" text-anchor="middle" fill="#c4b5fd" font-family="Segoe UI, sans-serif" font-size="10">Shared Memory</text>
+  </g>
+  
+  <!-- Backend (in heartbeat) -->
+  <g filter="url(#shadow4)">
+    <rect x="580" y="440" width="140" height="90" rx="8" fill="url(#serverGrad)"/>
+    <text x="650" y="475" text-anchor="middle" fill="#fff" font-family="Segoe UI, sans-serif" font-size="14" font-weight="bold">Backend</text>
+    <text x="650" y="495" text-anchor="middle" fill="#d1fae5" font-family="Segoe UI, sans-serif" font-size="10">License Check</text>
+    <text x="650" y="515" text-anchor="middle" fill="#a7f3d0" font-family="Segoe UI, sans-serif" font-size="10">Session Tracking</text>
+  </g>
+  
+  <!-- Heartbeat arrows -->
+  <path d="M 320 470 L 370 470" stroke="#f59e0b" stroke-width="2" fill="none" marker-end="url(#arrowOrange)"/>
+  <text x="345" y="462" text-anchor="middle" fill="#fbbf24" font-family="Consolas, monospace" font-size="8">Shared Mem</text>
+  
+  <path d="M 520 460 L 570 460" stroke="#8b5cf6" stroke-width="2" fill="none" marker-end="url(#arrowPurple4)"/>
+  <text x="545" y="452" text-anchor="middle" fill="#a78bfa" font-family="Consolas, monospace" font-size="8">POST /heartbeat</text>
+  
+  <path d="M 570 490 L 520 490" stroke="#10b981" stroke-width="2" fill="none" marker-end="url(#arrowGreen)"/>
+  <text x="545" y="508" text-anchor="middle" fill="#34d399" font-family="Consolas, monospace" font-size="8">{valid, license_info}</text>
+  
+  <!-- Periodic indicator -->
+  <g transform="translate(350, 560)">
+    <rect x="0" y="0" width="200" height="35" rx="6" fill="#292524"/>
+    <text x="100" y="22" text-anchor="middle" fill="#fbbf24" font-family="Segoe UI, sans-serif" font-size="11">⏱️ Periodic Validation (30s)</text>
+  </g>
+  
+  <!-- Grace period note -->
+  <g transform="translate(200, 610)">
+    <rect x="0" y="0" width="500" height="30" rx="6" fill="#1c1917" stroke="#78716c" stroke-width="1"/>
+    <text x="250" y="20" text-anchor="middle" fill="#a8a29e" font-family="Segoe UI, sans-serif" font-size="10">Grace Period: Continues running for network errors • Auto-recovery on reconnection</text>
+  </g>
+</svg>

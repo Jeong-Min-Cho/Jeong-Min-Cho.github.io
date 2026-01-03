@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Fixing npm Audit Errors When Using npmmirror Registry
-date: 2024-10-20 14:00 +0900
+date: 2025-10-20 14:00 +0900
 categories: [Programming, NPM]
 tags: [NPM, Node.js, Package Management, Troubleshooting]
 ---
