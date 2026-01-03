@@ -1,9 +1,12 @@
 ---
 layout: post
 title: "The MAC Address Betrayal: When Hardware IDs Go Rogue"
-date: 2025-12-10 10:00 +0900
+date: 2025-12-14 10:00 +0900
 categories: [Programming, Debugging]
 tags: [ShieldMod, C++, Windows, Hardware, HWID, Debugging]
+image:
+  path: /assets/img/posts/shieldmod/post3-3.jpg
+  alt: Debugging HWID issues meme
 ---
 
 ## Monday Morning Massacre

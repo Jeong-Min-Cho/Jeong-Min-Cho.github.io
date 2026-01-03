@@ -1,9 +1,12 @@
 ---
 layout: post
 title: "Race Conditions: When 5 API Requests All Refresh the Token"
-date: 2025-12-15 10:00 +0900
+date: 2025-12-26 10:00 +0900
 categories: [Programming, Debugging]
 tags: [ShieldMod, JavaScript, TypeScript, Async, Authentication, Concurrency]
+image:
+  path: /assets/img/posts/shieldmod/security-architecture.svg
+  alt: Security Architecture showing authentication layers
 ---
 
 ## The Heisenbug

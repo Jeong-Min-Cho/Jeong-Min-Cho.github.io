@@ -1,9 +1,12 @@
 ---
 layout: post
 title: "12 Lessons from Building a Full-Stack Platform (With Memes)"
-date: 2025-12-20 10:00 +0900
+date: 2026-01-03 10:00 +0900
 categories: [Programming, Lessons Learned]
 tags: [ShieldMod, Full-Stack, Architecture, Debugging, Best Practices, Career]
+image:
+  path: /assets/img/posts/shieldmod/post-1.png
+  alt: This is Fine meme - Building a full-stack platform
 ---
 
 ## 565,528 Lines. 2,721 Commits. 1,060 Bug Fixes. Here's What I Learned.

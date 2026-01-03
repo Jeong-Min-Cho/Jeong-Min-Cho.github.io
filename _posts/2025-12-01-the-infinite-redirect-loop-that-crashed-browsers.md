@@ -1,9 +1,12 @@
 ---
 layout: post
 title: "The Infinite Redirect Loop That Crashed Browsers"
-date: 2025-12-05 10:00 +0900
+date: 2025-12-01 10:00 +0900
 categories: [Programming, Debugging]
 tags: [ShieldMod, React, Next.js, Authentication, Debugging, JavaScript]
+image:
+  path: /assets/img/posts/shieldmod/post2-1.png
+  alt: Panik Kalm Panik meme about the infinite redirect loop
 ---
 
 ## When Logout Becomes an Infinite Loop
@@ -194,8 +197,6 @@ export function middleware(request: NextRequest) {
 | User complaints | 12/week | 0 |
 
 ## The Meme That Summarizes It All
-
-![Expanding Brain](https://i.imgflip.com/26k21l.jpg)
 
 - **Small brain:** Clear React state on logout
 - **Medium brain:** Clear React state AND cookies
